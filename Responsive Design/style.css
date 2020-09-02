@@ -1,0 +1,123 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding-bottom: 2em;
+    font-family: 'Sen', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #003B4A;
+}
+
+h1, h3 {
+    font-weight: 900;
+    line-height: 1;
+}
+
+h1 {
+    font-size: 4rem;
+    margin: 0;
+}
+
+h2 {
+    margin: 0;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size: 2.5rem;
+}
+
+a {
+    color: #F69333;
+}
+
+a:hover,
+a:focus {
+    color: rgb(96, 112, 116);
+}
+
+.sidebar a {
+    color: rgb(96, 112, 116);
+}
+
+.sidebar a:hover {
+    color: #F69333
+}
+
+
+header {
+    width: 100%;
+    background: #92DFF1;
+    text-align: center;
+    padding: 4em 0;
+}
+
+.intro {
+    width: 100%;
+}
+
+.summary {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    opacity: .8;
+    font-size: .95rem;
+    padding: 1em 0;
+}
+
+.preamble {
+    margin: 0 auto;
+    background: #efefef;
+    padding: 3em 2em;
+    margin-bottom: 4em;
+
+    /* This is an easier way to make content adjust into columns (without worrying about responsiveness)*/
+    columns: 20em;
+}
+
+.preamble h3 {
+    text-align: center;
+    column-span: all;
+}
+
+.preamble p {
+    margin-top: 0;
+}
+
+.main {
+    padding: 2rem;
+}
+
+.sidebar {
+    background: #92DFF1;
+    padding: 2em;
+}
+
+/* Mobile design first allows you to make more maintainable code */
+/* The code below does two things, first it changes the display to a flex
+    and centers the two main columns */
+@media (min-width: 900px) {
+    .page-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    /* 
+    
+    If you want to center two elements, put margin-left auto to the one in the left
+    and margin-right: auto to the one on the right;
+    
+    */
+    .main {
+        width: 50%;
+        margin-left: auto;
+    }
+    
+    .sidebar {
+        width: 30%;
+        margin-right: auto;
+    }
+}
