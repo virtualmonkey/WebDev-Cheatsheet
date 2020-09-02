@@ -1,0 +1,81 @@
+body {
+    background-color: white;
+    color: white;
+    font-size: 21px;
+}
+
+h1 {
+    font-size: 70px;
+    color: #374737
+}
+
+p {
+    color: #2f4c5c
+}
+
+/* The CSS box model */
+
+/*
+    Margin: empty space around my element
+    Border: border or stroke around element
+    Padding: empty space WITH background inside my element
+
+    Under normal circumstances, padding adds to the size of the box
+    This can be modified by the box-sizing property,
+
+    ALL OF THESE ADD ON TOP OF WIDTH AND HEIGHT
+
+*/
+.box {
+    height: 30px;
+    width: 30px;
+}
+.one {
+    background: #e89f7d;
+    margin: 30px;
+}
+
+.two {
+    background: red;
+    padding: 30px
+}
+
+.three {
+    background: yellow;
+
+    /* This will center the element horizontaly. Doesn't work the same with top and bottom*/
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.four {
+    background: blue;
+}
+
+.five {
+    background: papayawhip;
+}
+
+.demo-box {
+    margin: 100px auto
+}
+
+/* Margins of neighbour elemts merge into each other, instead of adding up*/
+/* Padding doesn't merge, its often used more than margin when you need to separate elements*/
+.one-box {
+    background: #374737;
+    height: 50px;
+    margin-bottom: 100px;
+}
+
+.two-box {
+    background: blue;
+    height: 50px;
+    margin-top: 100px;
+}
+
+.three-box {
+    background: red;
+    height: 50px;
+}
+
