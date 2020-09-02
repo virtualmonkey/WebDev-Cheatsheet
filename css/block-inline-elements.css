@@ -1,0 +1,50 @@
+body {
+    background-color: #a7dbe3;
+    color: white;
+    font-size: 21px;
+}
+
+/*
+    Inline elements: You can't adjust their height (margin, padding). 
+    They run in a line, and live inside other elements
+    You can't force a new line
+
+    Block elements: They accept margin, padding. They always force a new line.
+    Defualt width 100%
+
+
+    Inline Block elements: Gives you the ability to set margin and padding (and height)
+    Like you were using a block level element. 
+
+    But they also allow the elements to not force a new line, (inline)
+
+*/
+
+p {
+    outline: 3px solid red;
+}
+
+/* a {
+    outline: 3px solid blue;
+
+    
+    height: 100px;
+    margin-top: 200px;
+    margin-bottom: 200px;
+
+} */
+
+
+.btn {
+    display: inline-block;
+    background: lightblue;
+    color: black;
+    padding: 25px 75px;
+    text-decoration: none;
+
+}
+
+.btn:hover{
+    background: darkblue;
+    color: white;
+}
