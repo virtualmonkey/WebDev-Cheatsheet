@@ -1,3 +1,12 @@
+/* This allows us to select every single elemnt on the DOM, use this carefully since it will 
+make you start everything from scratch*/
+
+* {
+    margin: 0;
+    padding: 0
+}
+
+
 body {
     background-color: white;
     color: white;
@@ -57,6 +66,7 @@ p {
 }
 
 .demo-box {
+    /* display: flex and display:grid caouses that our margins don't collapse anymore*/
     margin: 100px auto
 }
 
@@ -74,8 +84,17 @@ p {
     margin-top: 100px;
 }
 
-.three-box {
-    background: red;
-    height: 50px;
-}
+/* Box Sizing
 
+    content-box: Pushes things in, it doesn't create extra empty space in your element
+*/
+.three-box {
+    background: #A01A7D;
+    color: white;
+    height: 200px;
+    width: 200px;
+    padding-top: 50px;
+    padding-left: 50px;
+    box-sizing: content-box;
+
+}
