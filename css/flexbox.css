@@ -1,0 +1,23 @@
+.container {
+    background: pink;
+    height: 50vh;
+    width: 50vw;
+    padding: 0.5em;
+    margin: 25vh auto 0;
+
+
+    display: flex;
+    flex-direction: row; /* Row-revers = float right*/
+    flex-wrap: wrap; /* nowrap behaves as a max-width */
+    justify-content: center; /* This determines behaviour in the main axis*/
+    align-items: center; /* This determines behaviour in the secondary axis, it does it 
+                            with each one in the available space it has */
+
+    align-content: center; /* aligns all of the content, but you need to have multiple lines*/
+}
+
+.item {
+    background: lightblue;
+    margin: 0.5em;
+    width: 25%;
+}
