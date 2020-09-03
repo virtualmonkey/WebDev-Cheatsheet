@@ -18,6 +18,7 @@ p::before {
 
 /* This inserts a pseudo element after the content of the parent element*/
 p::after {
+    content: 'Adios';
     background: red;
     display: block;
     font-size: 20px;
