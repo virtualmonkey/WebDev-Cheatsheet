@@ -1,93 +1,96 @@
-html {
-  height: 100%;
+.site {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
 }
 
-body {
-  /* display: flex;  /*enables flex content for its children*/
-  box-sizing: border-box;
-  margin: 0px;  /*removes default style*/
-  height: 100%;   
-  overflow: hidden;  /*makes the body non-scrollable (we will add scrolling to the sidebar and main content containers)*/  
-}
 .navbar {
-  width: 100%;
-  background: black;
+  background: rebeccapurple;
   color: white;
-  padding: 20px 40px;
+  min-height: 40px;
+  line-height: 40px;
+  overflow: hidden;
+  padding: 8px;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .content {
-  align-items: center;
-  display: 	flex;
-  flex-direction: column;
-  justify-content: center;
-  overflow-y: auto;
-  height: 100%;
+  display: flex;
+  flex: 1;
+  overflow: hidden;
 }
 
 .desktop-container {
-  align-items: center;
   display: 	flex;
-  flex: 4;
   flex-direction: column;
-  height: 100%;
-  justify-content: center;
+  flex: 1;
+  overflow-y: auto;
 }
 
 .side-nav {
   background: greenyellow;
   display: none;
-  /* flex: 0.5; */
+  box-sizing: border-box;
+  padding: 8px;
+  width: 120px;
 }
 
 .first-container {
   align-items: flex-start;
-  background: papayawhip;
+  background: olive;
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 20px 40px;
-  width: 100%;
+  padding: 8px 8px 0 8px;
 }
 
 .box {
   box-sizing: border-box;
-  color: white;
-  flex: 0 0;
-  height: 70px;
-  margin: 10px 20px;
-  padding: 10px 20px;
+  color: black;
+  flex: 1;
+  height: 80px;
+  line-height: 80px;
+  margin: 0 0 8px 0;
+  min-width: calc(50% - 4px);
   text-align: center;
-  width: 70px;
+}
+
+.box:nth-child(even) {
+  margin-left: 4px;
+}
+
+.box:nth-child(odd) {
+  margin-right: 4px;
 }
 
 .second-container {
-  align-items: center;
   background: lightblue;
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 20px 40px;
-  width: 100%;
+  padding: 8px 8px 0 8px;
 }
 
 .large-box {
   box-sizing: border-box;
-  color: white;
-  height: 70px;
-  margin: 10px 20px;
-  padding: 10px 20px;
+  color: black;
+  height: 80px;
+  line-height: 80px;
+  margin: 0 0 8px 0;
   text-align: center;
-  width: 200px;
 }
 
 .side-nav-link {
-  display: inline-block;
-  margin: 12px 20px;
+  display: block;
+  margin: 0 0 16px 0;
+}
+
+.side-nav-link:last-child {
+  margin-bottom: 0;
 }
 
 .box1 {
@@ -103,29 +106,55 @@ body {
 }
 
 @media screen and (min-width: 375px) {
-
   .content {
-    align-items: flex-start;
     flex-direction: row;
-    justify-content: start;
-    overflow-y: hidden;
+  }
+
+  .box {
+    min-width: calc(25% - 8px);
+  }
+
+  .box:nth-child(4n + 1),
+  .box:nth-child(4n + 2){
+    margin-left: 0;
+    margin-right: 8px;
+  }
+
+  .box:nth-child(4n + 3) {
+    margin-left: 0;
+    margin-right: 4px;
+  }
+
+  .box:nth-child(4n + 4) {
+    margin-left: 4px;
+    margin-right: 0;
   }
 
   .side-nav {
-    box-sizing: border-box;
     display: block;
-    flex: 1;
-    height: 100%;
-    padding: 12px 20px;
   }
 
+  .desktop-container {
+    height: 100%;
+  }
+}
+
+@media (min-width: 500px) {
   .second-container {
     flex-direction: row;
     flex-wrap: wrap;
   }
 
-  .desktop-container {
-    overflow-y: auto;
+  .large-box {
+    margin: 0 0 8px 0;
+    min-width: calc(50% - 4px);
   }
-
+  
+  .large-box:nth-child(even) {
+    margin-left: 4px;
+  }
+  
+  .large-box:nth-child(odd) {
+    margin-right: 4px;
+  }
 }
