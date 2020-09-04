@@ -3,48 +3,36 @@ html {
 }
 
 body {
-  /* height: 100%;    */
-  overflow: hidden;  /*makes the body non-scrollable (we will add scrolling to the sidebar and main content containers)*/
-  margin: 0px;  /*removes default style*/
   /* display: flex;  /*enables flex content for its children*/
   box-sizing: border-box;
-  
+  margin: 0px;  /*removes default style*/
+  height: 100%;   
+  overflow: hidden;  /*makes the body non-scrollable (we will add scrolling to the sidebar and main content containers)*/  
 }
-
-
-.main-container {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  justify-content: start;
-  /* flex-wrap: wrap; */
-  /* align-items: center; */
-}
-
 .navbar {
-  color: white;
+  width: 100%;
   background: black;
+  color: white;
   padding: 20px 40px;
-  z-index: 0;
 }
 
 .content {
+  align-items: center;
   display: 	flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   overflow-y: auto;
+  height: 100%;
 }
 
 .desktop-container {
-  display: 	flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  display: 	flex;
   flex: 4;
-  
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
 }
-
 
 .side-nav {
   background: greenyellow;
@@ -53,58 +41,55 @@ body {
 }
 
 .first-container {
-  padding: 20px 40px;
-  box-sizing: border-box;
+  align-items: flex-start;
   background: papayawhip;
+  box-sizing: border-box;
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px 40px;
   width: 100%;
 }
 
 .box {
+  box-sizing: border-box;
   color: white;
+  flex: 0 0;
   height: 70px;
-  width: 70px;
   margin: 10px 20px;
   padding: 10px 20px;
-  box-sizing: border-box;
   text-align: center;
-  /* flex: 1; */
+  width: 70px;
 }
 
 .second-container {
-  padding: 20px 40px;
-  box-sizing: border-box;
+  align-items: center;
   background: lightblue;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px 40px;
   width: 100%;
 }
 
-
 .large-box {
+  box-sizing: border-box;
   color: white;
   height: 70px;
-  width: 200px;
   margin: 10px 20px;
   padding: 10px 20px;
-  box-sizing: border-box;
   text-align: center;
-  /* flex: 1; */
+  width: 200px;
 }
-
 
 .side-nav-link {
   display: inline-block;
   margin: 12px 20px;
-  
 }
+
 .box1 {
   background: red;
 }
@@ -117,30 +102,30 @@ body {
   background: yellow;
 }
 
-
-
 @media screen and (min-width: 375px) {
+
   .content {
-    flex-direction: row;
     align-items: flex-start;
+    flex-direction: row;
     justify-content: start;
     overflow-y: hidden;
-
   }
+
   .side-nav {
-    display: block;
     box-sizing: border-box;
-    padding: 12px 20px;
+    display: block;
     flex: 1;
     height: 100%;
+    padding: 12px 20px;
   }
 
   .second-container {
     flex-direction: row;
     flex-wrap: wrap;
   }
+
   .desktop-container {
-    overflow-y: scroll;
+    overflow-y: auto;
   }
 
 }
