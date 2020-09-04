@@ -1,0 +1,41 @@
+.main-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 100vh;
+  justify-content: center;
+}
+
+.box {
+  color: white;
+  flex: 1;
+}
+
+.box1 {
+  background: red;
+}
+
+.box2 {
+  background: blue;
+}
+
+.box3 {
+  background: yellow;
+}
+
+.secondary-container {
+  background: green;
+  display: none;
+  height: 100px;
+}
+
+@media screen and (min-width: 375px) {
+  .main-container {
+    flex-direction: row;
+  }
+
+  .secondary-container {
+    display: block;
+    min-width: 100vw;
+  }
+}
