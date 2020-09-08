@@ -1,0 +1,168 @@
+.site {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.navbar {
+  background: black;
+  color: white;
+  line-height: 40px;
+  min-height: 40px;
+  overflow: hidden;
+  padding: 8px;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.content {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.content-main {
+  display: 	flex;
+  flex: 1;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.side-nav {
+  background: greenyellow;
+  box-sizing: border-box;
+  display: none;
+  padding: 8px;
+  width: 120px;
+}
+
+.box-container {
+  align-items: center;
+  background: lightblue;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding: 8px 8px 0 8px;
+}
+
+.box {
+  box-sizing: border-box;
+  color: black;
+  flex: 1;
+  height: 80px;
+  line-height: 80px;
+  margin: 0 0 8px 0;
+  min-width: calc(100% - 4px);
+  text-align: center;
+}
+
+.second-container {
+  align-items: flex-start;
+  background: lightgreen;
+  display: flex;
+  flex-direction: column;
+  padding: 8px 8px 0 8px;
+}
+
+/* .content-main > * :last-child {
+  margin-bottom: 0;
+} */
+
+.side-nav-link {
+  display: block;
+  margin: 0 0 16px 0;
+}
+
+.side-nav-link:last-child {
+  margin-bottom: 0;
+}
+
+.box1 {
+  background: red;
+}
+
+.box2 {
+  background: blue;
+}
+
+.box3 {
+  background: yellow;
+}
+
+.paragraph {
+  background:white;
+  box-sizing: border-box;
+  color: black;
+  display: block;
+  margin: 0 0 8px 0;
+  padding: 0 8px 8px 8px;
+}
+
+.header {
+  background: white;
+  box-sizing: border-box;
+  color: darkblue;
+  display: inline-block;
+  margin: 0 0 8px 0;
+  padding: 8px;
+}
+
+.subheader {
+  background: white;
+  box-sizing: border-box;
+  color: darkblue;
+  display: inline-block;
+  margin: 0 0 8px 0;
+  padding: 8px;
+}
+
+.image {
+  box-sizing: border-box;
+  height: auto;
+  margin: 0 0 8px 0;
+  width: 100%;
+}
+
+
+@media screen and (min-width: 375px) {
+  .content {
+    flex-direction: row;
+  }
+  .box-container {
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .box {
+    min-width: calc(25% - 8px);
+  }
+
+  .box:nth-child(4n + 1),
+  .box:nth-child(4n + 2){
+    margin-left: 0;
+    margin-right: 8px;
+  }
+
+  .box:nth-child(4n + 3) {
+    margin-left: 0;
+    margin-right: 8px;
+  }
+
+  .box:nth-child(4n + 4) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .side-nav {
+    display: block;
+  }
+
+  .content-main {
+    height: 100%;
+  }
+}
