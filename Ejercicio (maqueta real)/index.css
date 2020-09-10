@@ -1,0 +1,278 @@
+.site {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #f7f6f2;
+  margin: 8px;
+  border: #c5c3c4 solid 2px;
+  height: 100%;
+}
+
+.page-title-container {
+  box-sizing: border-box;
+  margin: 56px auto 56px auto;
+  padding: 0;
+}
+
+.page-title {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  font-family: "Gotham SSm A","Gotham SSm B","Gotham SSm","Gotham","Helvetica Neue",Verdana,Arial,sans-serif;
+  text-transform: uppercase;
+  line-height: 44px;
+  font-size: 24px;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  width: 100%;
+  margin: 0 0 24px 0;
+  padding: 0 24px;
+  /* border: #c5c3c4 solid 2px; */
+}
+
+.item {
+  box-sizing: border-box;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  width: 100%;
+  margin: 0 8px 0 8px;
+  padding: 0 0 0 0;
+  /* border: #c5c3c4 solid 2px; */
+}
+
+.item img {
+  display: block;
+  padding: 0;
+  margin: 0 0 40px 0;
+}
+
+.product-info {
+  padding: 0;
+  margin: 0 0 24px 0;
+  width: 100%;
+}
+
+.product-title-container {
+  box-sizing: border-box;
+  margin: 0 0 4px 0;
+  padding: 0;
+}
+
+.product-title {
+  display: inline-block;
+  margin: 0 0 4px 0;
+  padding: 0;
+  font-family: "Gotham SSm A","Gotham SSm B","Gotham SSm","Gotham","Helvetica Neue",Verdana,Arial,sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+  color: black;
+}
+
+.product-description-container {
+  box-sizing: border-box;
+  margin: 0 0 8px 0;
+  padding: 0 0 8px 0;
+  border-bottom: #d8d8d8 1px solid;
+}
+
+.product-description {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  color: #81807c;
+  font-family: "Gotham SSm A","Gotham SSm B","Gotham SSm","Gotham","Helvetica Neue",Verdana,Arial,sans-serif;
+  text-transform: capitalize;
+}
+
+
+.product-specs-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  box-sizing: border-box;
+  margin: 0 0 8px 0;
+  padding: 0;
+}
+
+.product-specs {
+  box-sizing: border-box;
+  margin: 0 0 0 0;
+  padding: 0;
+  width: 50%;
+}
+
+.product-specs-text {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  color: black;
+  font-family: "Gotham SSm A","Gotham SSm B","Gotham SSm","Gotham","Helvetica Neue",Verdana,Arial,sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  justify-self: flex-start;
+}
+
+.stars-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  box-sizing: border-box;
+  margin: 0 0 0 0;
+  padding: 0;
+  width: 50%;
+}
+
+.star-filled {
+  box-sizing: 0;
+  padding: 0;
+  margin-right: 8px;
+}
+
+.glyphicon-star {
+  color: #917231;
+}
+
+.add-to-cart-button {
+  box-sizing: border-box;
+  margin: 0 0 24px 0;
+  padding: 16px 0;
+  color: white;
+  background: #917231;
+  text-transform: uppercase;
+  min-width: 100%;
+  font-family: "Gotham SSm A","Gotham SSm B","Gotham SSm","Gotham","Helvetica Neue",Verdana,Arial,sans-serif;
+}
+
+.slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0 0 8px 0;
+}
+
+.slider__arrow-left {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  width: 33%;
+}
+
+.slider__arrow-right {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  width: 33%;
+}
+
+.slider__page {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 34%;
+}
+
+
+
+.slider h4 {
+  box-sizing: border-box;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  color: black;
+  font-family: "Gotham SSm A","Gotham SSm B","Gotham SSm","Gotham","Helvetica Neue",Verdana,Arial,sans-serif;
+  font-weight: 500;
+  justify-self: flex-start;
+}
+
+.test-button {
+  box-sizing: border-box;
+  margin: 0 0 24px 0;
+  padding: 16px 0;
+  color: white;
+  background: #917231;
+  text-transform: uppercase;
+  width: 100%;
+  font-family: "Gotham SSm A","Gotham SSm B","Gotham SSm","Gotham","Helvetica Neue",Verdana,Arial,sans-serif;
+}
+
+.recommendations {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  width: 100%;
+  margin: 0;
+  padding: 0 24px;
+}
+
+.recommendations__text {
+  box-sizing: border-box;
+  margin: 0 0 24px 0; 
+  padding: 0 0;
+}
+
+.recommendations__text h4 {
+  margin: 0;
+  padding: 0;
+}
+
+.desktop-only {
+  display: none;
+}
+
+@media screen and (min-width: 375px) {
+  .content {
+    flex-direction: row;
+  }
+
+  .desktop-only {
+    display: flex;
+  }
+
+  .slider {
+    display: none;
+  }
+
+  .add-to-cart-button {
+    display: none;
+  }
+
+  .item {
+    max-width: 248px;
+    margin: 0 48px;
+  }
+
+  .test-button {
+    max-width: 312px;
+    min-width: 0;
+  }
+}

@@ -65,12 +65,12 @@
   background: lightgreen;
   display: flex;
   flex-direction: column;
-  padding: 8px 8px 0 8px;
+  padding: 8px;
 }
 
-/* .content-main > * :last-child {
+.second-container > *:last-child {
   margin-bottom: 0;
-} */
+} 
 
 .side-nav-link {
   display: block;
@@ -99,7 +99,7 @@
   color: black;
   display: block;
   margin: 0 0 8px 0;
-  padding: 0 8px 8px 8px;
+  padding: 0;
 }
 
 .header {
@@ -108,7 +108,7 @@
   color: darkblue;
   display: inline-block;
   margin: 0 0 8px 0;
-  padding: 8px;
+  padding: 0;
 }
 
 .subheader {
@@ -117,14 +117,16 @@
   color: darkblue;
   display: inline-block;
   margin: 0 0 8px 0;
-  padding: 8px;
+  padding: 0;
 }
 
 .image {
   box-sizing: border-box;
   height: auto;
-  margin: 0 0 8px 0;
-  width: 100%;
+  margin: 0 auto 8px auto; /* Esta tiene margen de abajo, pero idealmente debería de quitársele, porque el padding se encarga de ello*/
+  width: 100%; 
+  max-width: 200px;
+
 }
 
 
@@ -160,9 +162,5 @@
 
   .side-nav {
     display: block;
-  }
-
-  .content-main {
-    height: 100%;
   }
 }
