@@ -136,7 +136,6 @@
   max-width: 128px;
   padding: 0;
   text-overflow: ellipsis;
-
 }
 
 .item > *:last-child{
@@ -164,7 +163,7 @@
 }
 
 .item:hover::after {
-  background:#0b59a7;
+  content: url("./img/check.png");
   border: #5f6ed9 1px solid;
 }
 
