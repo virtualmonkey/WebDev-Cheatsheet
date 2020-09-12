@@ -14,15 +14,16 @@
   margin: 8px;
   border: #c5c3c4 solid 2px;
   height: 100%;
+  padding: 0px 24px;
 }
 
-.page-title-container {
+.page-title {
   box-sizing: border-box;
   margin: 56px auto 56px auto;
   padding: 0;
 }
 
-.page-title {
+.page-title__text {
   display: inline-block;
   margin: 0;
   padding: 0;
@@ -42,7 +43,7 @@
   background: transparent;
   width: 100%;
   margin: 0 0 24px 0;
-  padding: 0 24px;
+  padding: 0;
   /* border: #c5c3c4 solid 2px; */
 }
 
@@ -64,15 +65,17 @@
   display: block;
   padding: 0;
   margin: 0 0 40px 0;
+  width: 160px;
+  height: 256px;
 }
 
-.product-info {
+.item__info {
   padding: 0;
   margin: 0 0 24px 0;
   width: 100%;
 }
 
-.product-title-container {
+.item__info__title {
   box-sizing: border-box;
   margin: 0 0 4px 0;
   padding: 0;
@@ -89,11 +92,11 @@
   color: black;
 }
 
-.product-description-container {
+.item__info__description {
   box-sizing: border-box;
   margin: 0 0 8px 0;
   padding: 0 0 8px 0;
-  border-bottom: #d8d8d8 1px solid;
+  border-bottom: #d3d1d2 1px solid;
 }
 
 .product-description {
@@ -106,7 +109,7 @@
 }
 
 
-.product-specs-container {
+.item__info__specs {
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
@@ -115,14 +118,14 @@
   padding: 0;
 }
 
-.product-specs {
+.item__info__specs__price {
   box-sizing: border-box;
   margin: 0 0 0 0;
   padding: 0;
   width: 50%;
 }
 
-.product-specs-text {
+.item__info__specs__price-text {
   display: inline-block;
   margin: 0;
   padding: 0;
@@ -133,7 +136,7 @@
   justify-self: flex-start;
 }
 
-.stars-container {
+.item__info__specs__stars {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -163,9 +166,11 @@
   text-transform: uppercase;
   min-width: 100%;
   font-family: "Gotham SSm A","Gotham SSm B","Gotham SSm","Gotham","Helvetica Neue",Verdana,Arial,sans-serif;
+  border: none;
+  outline: none;
 }
 
-.slider {
+.item__slider {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -201,7 +206,7 @@
 
 
 
-.slider h4 {
+.item__slider h4 {
   box-sizing: border-box;
   display: inline-block;
   margin: 0;
@@ -212,7 +217,7 @@
   justify-self: flex-start;
 }
 
-.test-button {
+.recommendations__test-button {
   box-sizing: border-box;
   margin: 0 0 24px 0;
   padding: 16px 0;
@@ -221,6 +226,8 @@
   text-transform: uppercase;
   width: 100%;
   font-family: "Gotham SSm A","Gotham SSm B","Gotham SSm","Gotham","Helvetica Neue",Verdana,Arial,sans-serif;
+  border: none;
+  outline: none;
 }
 
 .recommendations {
@@ -231,7 +238,7 @@
   background: transparent;
   width: 100%;
   margin: 0;
-  padding: 0 24px;
+  padding: 0;
 }
 
 .recommendations__text {
@@ -249,7 +256,7 @@
   display: none;
 }
 
-@media screen and (min-width: 375px) {
+@media screen and (min-width: 500px) {
   .content {
     flex-direction: row;
   }
@@ -258,7 +265,7 @@
     display: flex;
   }
 
-  .slider {
+  .item__slider { 
     display: none;
   }
 
@@ -268,10 +275,16 @@
 
   .item {
     max-width: 248px;
-    margin: 0 48px;
+    max-height: 280px;
+    margin: 0 24px;
   }
 
-  .test-button {
+  .item img {
+    width: 80px;
+    height: 128px;
+  }
+
+  .recommendations__test-button {
     max-width: 312px;
     min-width: 0;
   }
