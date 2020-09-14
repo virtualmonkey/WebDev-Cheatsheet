@@ -41,12 +41,11 @@
   width: 100%;
 }
 
-.step__number--visited {
+.step--visited__number {
   color: #2f6189;
 }
 
-
-.step__number--active {
+.step--active__number {
   border-bottom: #2f6189 2px solid;
   color: #2f6189;
 }
@@ -63,7 +62,7 @@
   width: 100%;
 }
 
-.step__name--visited {
+.step--visited__name {
   color: #2f6189;
 }
 
@@ -105,22 +104,22 @@
 }
 
 .item {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
   align-items: center;
   background: white;
   border: #ececec 1px solid ;
   border-radius: 8px;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 128px;
+  justify-content: flex-start;
   margin: 0 0 8px 0;
   min-height: 112px;
-  height: 128px;
   min-width: 128px;
-  width: 144px;
   outline: none;
   padding: 8px 0 0 0;
   position: relative;
+  width: 144px;
 }
 
 .item img {
@@ -164,8 +163,8 @@
 }
 
 .item:hover::after {
-  content: url("./img/check.png");
   border: #5f6ed9 1px solid;
+  content: url("./img/check.png");
 }
 
 .item:nth-child(2n+1) {
@@ -180,7 +179,6 @@
   margin: 0 auto 0 auto;
   padding: 0;
 }
-
 
 .question-button {
   border: none;
@@ -197,7 +195,6 @@
   background: #d4e8ff;
   color: #245f97;
 }
-
 
 .question-button--active {
   background: #015da8;
@@ -261,9 +258,6 @@
 }
 
 @media screen and (min-width: 720px){
-  .step__number {
-    border-bottom: #eaeaea 2px solid;
-  }
   .step {
     width: 80px;
   }
@@ -307,5 +301,4 @@
     margin-left: 0;
     margin-right: 0;
   }
-
 }
