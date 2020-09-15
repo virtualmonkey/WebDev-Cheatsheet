@@ -8,77 +8,75 @@
   padding: 8px
 }
 
+.steps-text {
+  box-sizing: border-box;
+  margin: 32px 0 8px 0 ;
+  font-family: Source Sans Pro;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
 .steps-container {
   align-items: center;
   display: flex;
-  flex-wrap: nowrap;
   justify-content: center;
-  margin: 8px 0 24px 0;
+  margin: 0 0 8px 0;
   padding: 0;
+  max-width: 446px;
+  max-height: 14px;
+  position: relative;
+}
+
+.steps-container > *:last-child{
+  margin-right: 0;
 }
 
 .step {
-  align-items: center;
-  background: transparent;
-  border: none;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 0;
-  min-width: 32px;
+  margin: 0 24px 0 0;
+  padding: 0;
+  width: 8px;
+  max-height: 8px;
+  max-width: 8px;
+  height: 8px;
+  color: #DBDBDB;
   outline: none;
-  padding: 0
+  border: none;
+  border-radius: 50%;
 }
 
-.step__number {
+.step--active {
+  width: 10px;
+  height: 10px;
+  background: #005555;
+}
+
+.steps-container::after {
+  background: #DBDBDB;
   box-sizing: border-box;
-  color: #eaeaea;
-  font-weight: 600;
+  content: "";
+  height: 1px;
   margin: 0;
   padding: 0;
-  text-transform: uppercase;
-  width: 100%;
-}
-
-.step--visited__number {
-  color: #2f6189;
-}
-
-.step--active__number {
-  border-bottom: #2f6189 2px solid;
-  color: #2f6189;
-}
-
-.step__name {
-  box-sizing: border-box;
-  color: #eaeaea;
-  display: none;
-	font-size: smaller;
-	font-weight: 600;
-  margin: 0;
-  padding: 8px 0 0 0;
-  text-transform: uppercase;
-  width: 100%;
-}
-
-.step--visited__name {
-  color: #2f6189;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 99%;
+  z-index: -2;
 }
 
 .page-title {
   box-sizing: border-box;
-  color: #0d558f;
-  font-size: 24px;
-  margin: 0 0 16px 0;
-  padding: 0;
-}
-
-.page-question {
-  box-sizing: border-box;
-  color: #0b5c9d;
-  font-size: 20px;
-  font-weight: 700;
+  color: #000000;
+  font-family: Source Sans Pro;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 35px;
+  line-height: 36px;
   margin: 0 0 16px 0;
   padding: 0;
   text-align: center;
@@ -86,9 +84,14 @@
 
 .page-description {
   box-sizing: border-box;
-  color: #898d8e;
+  color: #000000;
   margin: 0 0 16px 0;
   padding: 0;
+  font-family: Source Sans Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
   text-align: center;
 }
 
@@ -104,38 +107,62 @@
 }
 
 .item {
-  align-items: center;
-  background: white;
-  border: #ececec 1px solid ;
-  border-radius: 8px;
+  background: #F6F6F6;
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  height: 128px;
-  justify-content: flex-start;
+  display: block;
   margin: 0 0 8px 0;
-  min-height: 112px;
-  min-width: 128px;
+  padding: 130px 0 0 0;
+  width: 220px;
+  height: 208px;
+  /* min-height: 112px;
+  min-width: 128px; */
   outline: none;
-  padding: 8px 0 0 0;
+  border: none;
   position: relative;
-  width: 144px;
+
 }
 
 .item img {
-  box-sizing: border-box;
-  height: 64px;
-  margin: 0 0 8px 0;
-  width: 64px;
+  height: 128px;
+  margin: 0;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
-.item__name {
+.item__content {
+  display: flex;
   box-sizing: border-box;
-  color: #8b8e91;
-  margin: 0 auto 8px auto;
-  max-width: 128px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  height: 80px;
+  margin: 0;
+  padding: 16px;
+}
+
+.iten__content__title {
+  font-family: Source Sans Pro;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
   padding: 0;
-  text-overflow: ellipsis;
+  box-sizing: border-box;
+  margin: 0 0 8px 0;
+}
+
+.item__content__description {
+  font-family: Source Sans Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 .item > *:last-child{
@@ -148,27 +175,24 @@
   border-radius: 50%;
   box-sizing: border-box;
   content: "";
-  height: 24px;
+  height: 16px;
   margin: 0;
   padding: 0;
   position: absolute;
   right: 8px;
   top: 8px;
-  width: 24px;
+  width: 16px;
   z-index: 2;
 }
 
 .item:hover {
-  background: #eef5ff;
+  background: #E5F2F2;
+  border: 1px solid #007E7D;
+  color: #007E7E;
 }
 
 .item:hover::after {
-  border: #5f6ed9 1px solid;
-  content: url("./img/check.png");
-}
-
-.item:nth-child(2n+1) {
-  margin-right: 8px;
+  background: #007E7E;
 }
 
 .button-container {
@@ -182,7 +206,6 @@
 
 .question-button {
   border: none;
-  border-radius: 8px;
   box-sizing: border-box;
   font-weight: 600;
   margin: 0 0 16px 0;
@@ -192,13 +215,13 @@
 }
 
 .question-button--inactive {
-  background: #d4e8ff;
-  color: #245f97;
+  background: #DBDBDB;
+  color: white;
 }
 
 .question-button--active {
-  background: #015da8;
-  color: #dbfafc;
+  background: #005555;
+  color: white;
 }
 
 .button-container > *:last-child{
@@ -206,22 +229,20 @@
 }
 
 @media screen and (min-width: 500px){
-  .item {
-    min-width: calc(33% - 8px);
+  .step {
+    margin: 0 48px 0 0;
   }
+  /* .item {
+    min-width: calc(50% - 8px);
+  } */
 
-  .item:nth-child(3n + 1),
-  .item:nth-child(3n + 2){
-    margin-left: 0;
+  .item:nth-child(2n+1){
     margin-right: 8px;
   }
 
-
-  .item:nth-child(3n + 3) {
-    margin-left: 0;
-    margin-right: 0;
+  .item:nth-child(2n){
+    margin-right: 0px;
   }
-
   .button-container {
     align-items: center;
     display: flex;
@@ -243,29 +264,28 @@
   .step__name {
     display: block;
   }
-
+/* 
   .item {
-    min-width: calc(25% - 8px);
-  }
+    min-width: calc(33% - 8px);
+  } */
 
-  .item:nth-child(4n + 1),
-  .item:nth-child(4n + 2),
-  .item:nth-child(4n + 3){
+  .item:nth-child(3n + 1),
+  .item:nth-child(3n + 2){
     margin-left: 0;
     margin-right: 8px;
   }
 
-  .item:nth-child(4n + 4) {
+  .item:nth-child(3n) {
     margin-left: 0;
     margin-right: 0;
   }
 
 }
 
-@media screen and (min-width: 900px){
-  .item {
+@media screen and (min-width: 920px){
+  /* .item {
     min-width: calc(20% - 8px);
-  }
+  } */
 
   .item:nth-child(5n + 1),
   .item:nth-child(5n + 2),
