@@ -1,16 +1,10 @@
 .site {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  justify-content: start;
-  overflow: hidden;
-  padding: 8px
+  padding: 0 16px;
 }
 
 .steps-text {
   box-sizing: border-box;
-  margin: 32px 0 8px 0 ;
+  margin: 32px 0 12px 0 ;
   font-family: Source Sans Pro;
   font-style: normal;
   font-weight: bold;
@@ -24,10 +18,10 @@
 .steps-container {
   align-items: center;
   display: flex;
-  justify-content: center;
-  margin: 0 0 8px 0;
+  justify-content: space-between;
+  margin: 0 auto 24px auto;
   padding: 0;
-  max-width: 446px;
+  max-width: 280px;
   max-height: 14px;
   position: relative;
 }
@@ -85,7 +79,7 @@
 .page-description {
   box-sizing: border-box;
   color: #000000;
-  margin: 0 0 16px 0;
+  margin: 0 auto 16px auto;
   padding: 0;
   font-family: Source Sans Pro;
   font-style: normal;
@@ -93,6 +87,7 @@
   font-size: 16px;
   line-height: 22px;
   text-align: center;
+  max-width: 676px;
 }
 
 .content {
@@ -119,7 +114,7 @@
   outline: none;
   border: none;
   position: relative;
-
+  border: transparent 1px solid;
 }
 
 .item img {
@@ -211,7 +206,8 @@
   margin: 0 0 16px 0;
   outline: none;
   padding: 16px 32px;
-  width: 100%;
+  height: 56px;
+  width: 208px;
 }
 
 .question-button--inactive {
@@ -229,12 +225,10 @@
 }
 
 @media screen and (min-width: 500px){
-  .step {
-    margin: 0 48px 0 0;
+
+  .steps-container {
+    max-width: 446px;
   }
-  /* .item {
-    min-width: calc(50% - 8px);
-  } */
 
   .item:nth-child(2n+1){
     margin-right: 8px;
@@ -242,17 +236,6 @@
 
   .item:nth-child(2n){
     margin-right: 0px;
-  }
-  .button-container {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
-  .question-button {
-    height: 56px;
-    margin: 0 0 0 8px;
-    width: 208px;
   }
 }
 
@@ -264,10 +247,6 @@
   .step__name {
     display: block;
   }
-/* 
-  .item {
-    min-width: calc(33% - 8px);
-  } */
 
   .item:nth-child(3n + 1),
   .item:nth-child(3n + 2){
@@ -283,9 +262,6 @@
 }
 
 @media screen and (min-width: 920px){
-  /* .item {
-    min-width: calc(20% - 8px);
-  } */
 
   .item:nth-child(5n + 1),
   .item:nth-child(5n + 2),
